@@ -1,5 +1,5 @@
 # OracyBox App for iPads
-[!Image of OracyBox Logo](OracyBox/OracyBox/Supporting%20Files/Assets.xcassets/AppIcon.appiconset/icon_60pt@3x.png)
+![Image of OracyBox Logo](icon_60pt@3x.png)
 
 ## Part of the Oracybox service
 ### Check out the [oracybox-web repository](https://github.com/adamisafk/oracybox-web) to setup the web service, which includes an admin panel to manage classrooms, pupils, and activities as well as the MySQL database and RESTful API.
