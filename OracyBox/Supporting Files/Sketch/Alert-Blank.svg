@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="564px" height="259px" viewBox="0 0 564 259" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Alert</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Login" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Log-Out-Confirmation" transform="translate(-108.000000, -348.000000)" stroke="#979797">
+            <g id="Alert" transform="translate(77.000000, 348.000000)">
+                <path d="M40.3030928,55.4721907 C35.4293215,55.4721907 31.5,56.8903386 31.5,58.3298091 L31.5,255.170191 C31.5,256.609661 35.4293215,258.027809 40.3030928,258.027809 L585.696907,258.027809 C590.570679,258.027809 594.5,256.609661 594.5,255.170191 L594.5,58.3298091 C594.5,56.8903386 590.570679,55.4721907 585.696907,55.4721907 L40.3030928,55.4721907 Z" id="Rectangle-Copy-3" fill="#ECF0F1"></path>
+                <rect id="Rectangle-Copy-4" fill="#16A085" x="31.5" y="0.5" width="563" height="96" rx="8"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D233EBA240979B2006E0405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D233EB9240979B2006E0405 /* Main.storyboard */; };
+		8D233EBC24097E62006E0405 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D233EBB24097E62006E0405 /* LoginController.swift */; };
+		8D233EBF2409A2E3006E0405 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D233EBE2409A2E3006E0405 /* HomeController.swift */; };
+		8D233EC12409A47E006E0405 /* CollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D233EC02409A47E006E0405 /* CollectionController.swift */; };
+		8D233EC32409B5E0006E0405 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8D233EC22409B5E0006E0405 /* README.md */; };
 		8D2515C42408111F00605982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2515C32408111F00605982 /* AppDelegate.swift */; };
 		8D2515C62408111F00605982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2515C52408111F00605982 /* ViewController.swift */; };
 		8D2515C92408111F00605982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D2515C72408111F00605982 /* Main.storyboard */; };
@@ -15,6 +20,9 @@
 		8D2515D12408112000605982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D2515CF2408112000605982 /* LaunchScreen.storyboard */; };
 		8D2515DC2408112000605982 /* OracyBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2515DB2408112000605982 /* OracyBoxTests.swift */; };
 		8D2515E72408112000605982 /* OracyBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2515E62408112000605982 /* OracyBoxUITests.swift */; };
+		8D5EABDA24096AE400992CC6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EABD824096AE400992CC6 /* Colors.xcassets */; };
+		8D5EABDB24096AE400992CC6 /* UIColor+NamedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EABD924096AE400992CC6 /* UIColor+NamedColors.swift */; };
+		8D5EABDD24096B8900992CC6 /* Sketch in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EABDC24096B8900992CC6 /* Sketch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D233EB9240979B2006E0405 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8D233EBB24097E62006E0405 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		8D233EBE2409A2E3006E0405 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		8D233EC02409A47E006E0405 /* CollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionController.swift; sourceTree = "<group>"; };
+		8D233EC22409B5E0006E0405 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8D2515C02408111F00605982 /* OracyBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OracyBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2515C32408111F00605982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D2515C52408111F00605982 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +62,9 @@
 		8D2515E22408112000605982 /* OracyBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OracyBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2515E62408112000605982 /* OracyBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OracyBoxUITests.swift; sourceTree = "<group>"; };
 		8D2515E82408112000605982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D5EABD824096AE400992CC6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		8D5EABD924096AE400992CC6 /* UIColor+NamedColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+NamedColors.swift"; sourceTree = "<group>"; };
+		8D5EABDC24096B8900992CC6 /* Sketch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sketch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +92,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D233EBD24099EF9006E0405 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		8D2515B72408111F00605982 = {
 			isa = PBXGroup;
 			children = (
+				8D233EC22409B5E0006E0405 /* README.md */,
 				8D2515C22408111F00605982 /* OracyBox */,
 				8D2515DA2408112000605982 /* OracyBoxTests */,
 				8D2515E52408112000605982 /* OracyBoxUITests */,
@@ -99,11 +123,12 @@
 		8D2515C22408111F00605982 /* OracyBox */ = {
 			isa = PBXGroup;
 			children = (
+				8D3C84AE2409673F002E123E /* Supporting Files */,
+				8D3C84AD24096725002E123E /* Views */,
+				8D3C84AC24096713002E123E /* Model */,
+				8D3C84AB2409670C002E123E /* Controllers */,
 				8D2515C32408111F00605982 /* AppDelegate.swift */,
-				8D2515C52408111F00605982 /* ViewController.swift */,
 				8D2515C72408111F00605982 /* Main.storyboard */,
-				8D2515CD2408112000605982 /* Assets.xcassets */,
-				8D2515CF2408112000605982 /* LaunchScreen.storyboard */,
 				8D2515D22408112000605982 /* Info.plist */,
 				8D2515CA2408111F00605982 /* OracyBox.xcdatamodeld */,
 			);
@@ -126,6 +151,53 @@
 				8D2515E82408112000605982 /* Info.plist */,
 			);
 			path = OracyBoxUITests;
+			sourceTree = "<group>";
+		};
+		8D3C84AB2409670C002E123E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D2515C52408111F00605982 /* ViewController.swift */,
+				8D233EBB24097E62006E0405 /* LoginController.swift */,
+				8D233EBD24099EF9006E0405 /* New Group */,
+				8D233EBE2409A2E3006E0405 /* HomeController.swift */,
+				8D233EC02409A47E006E0405 /* CollectionController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8D3C84AC24096713002E123E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8D3C84AD24096725002E123E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D233EB9240979B2006E0405 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8D3C84AE2409673F002E123E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D5EABD824096AE400992CC6 /* Colors.xcassets */,
+				8D5EABD924096AE400992CC6 /* UIColor+NamedColors.swift */,
+				8D3C84AF2409677A002E123E /* Base.lproj */,
+				8D2515CD2408112000605982 /* Assets.xcassets */,
+				8D5EABDC24096B8900992CC6 /* Sketch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D3C84AF2409677A002E123E /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				8D2515CF2408112000605982 /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +304,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D5EABDA24096AE400992CC6 /* Colors.xcassets in Resources */,
 				8D2515D12408112000605982 /* LaunchScreen.storyboard in Resources */,
 				8D2515CE2408112000605982 /* Assets.xcassets in Resources */,
+				8D233EC32409B5E0006E0405 /* README.md in Resources */,
+				8D233EBA240979B2006E0405 /* Main.storyboard in Resources */,
+				8D5EABDD24096B8900992CC6 /* Sketch in Resources */,
 				8D2515C92408111F00605982 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +337,11 @@
 			files = (
 				8D2515CC2408111F00605982 /* OracyBox.xcdatamodeld in Sources */,
 				8D2515C62408111F00605982 /* ViewController.swift in Sources */,
+				8D233EBF2409A2E3006E0405 /* HomeController.swift in Sources */,
 				8D2515C42408111F00605982 /* AppDelegate.swift in Sources */,
+				8D233EC12409A47E006E0405 /* CollectionController.swift in Sources */,
+				8D5EABDB24096AE400992CC6 /* UIColor+NamedColors.swift in Sources */,
+				8D233EBC24097E62006E0405 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +526,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.adamhowells.OracyBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -464,7 +544,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.adamhowells.OracyBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
