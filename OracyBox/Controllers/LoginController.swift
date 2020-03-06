@@ -8,11 +8,31 @@
 
 import UIKit
 import Alamofire
+import KeychainSwift
+import SwiftyJSON
+import Alamofire_SwiftyJSON
+
+// Keys
+struct Keys {
+    static let prefix1 = "user1_"
+    static let prefix2 = "user2_"
+    static let token = "token"
+    
+    static let id = "id"
+    static let role_id = "role_id"
+    static let name = "name"
+    static let email = "email"
+    static let avatar = "avatar"
+}
 
 class LoginController: UIViewController {
     
+    // need to load the website first, then use ps:exec to reinstall passport oauth private keys between thirty minutes of inactivity due to heroku free plan.
     let baseURL =  "http://oracybox.test/api/user/login"
     private let networkingClient = NetworkingClient()
+    let keychain1 = KeychainSwift(keyPrefix: Keys.prefix1)
+    let keychain2 = KeychainSwift(keyPrefix: Keys.prefix2)
+    let userController = UserController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +60,7 @@ class LoginController: UIViewController {
         alert.addAction(UIAlertAction(title: "Login", style: .default, handler: { (login) in
             let usernameField = alert.textFields![0]
             let passwordField = alert.textFields![1]
-            self.loginUser(username: usernameField.text!, password: passwordField.text!)
+            self.loginUser(username: usernameField.text!, password: passwordField.text!, loginTitle: titleID)
             alert.dismiss(animated: true, completion: nil)
             if titleID == "Login #1" {
                 self.createAlert(title: "Login #2", message: "Please ask your teacher if you don't remember your username and password!")
@@ -75,12 +95,30 @@ class LoginController: UIViewController {
     
 
     
-    func loginUser(username: String, password: String) {
-        print(username, password)
+    func loginUser(username: String, password: String, loginTitle: String) {
         let loginURL = self.baseURL + "?email=" + username + "&password=" + password
         
-        Alamofire.request(loginURL, method: .post).responseJSON { response in
-            debugPrint(response)
+        Alamofire.request(loginURL, method: .post).responseSwiftyJSON { response in
+            // TODO: Error handling and response status handling
+            // TODO: Use parameters to pass through username and password (security)
+            //debugPrint(response)
+            let json = try! JSON(data: response.data!)
+            //print(json["success"]["token"].stringValue)
+            
+            if loginTitle == "Login #1" {
+                if self.keychain1.set(json["success"]["token"].stringValue, forKey: Keys.token) {
+                    print("set user 1 token")
+                    self.userController.getUser(token: self.keychain1.get(Keys.token)!, prefix: Keys.prefix1)
+                } else {
+                    print("did not set")
+                }
+            } else {
+                if self.keychain2.set(json["success"]["token"].stringValue, forKey: Keys.token) {
+                    print("set user 2 token")
+                } else {
+                    print("did not set")
+                }
+            }
         }
         
 //        guard let urlToExecute = URL(string: loginURL) else {

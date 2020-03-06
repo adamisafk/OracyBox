@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,11 +23,12 @@
 		8D2515D12408112000605982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D2515CF2408112000605982 /* LaunchScreen.storyboard */; };
 		8D2515DC2408112000605982 /* OracyBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2515DB2408112000605982 /* OracyBoxTests.swift */; };
 		8D2515E72408112000605982 /* OracyBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2515E62408112000605982 /* OracyBoxUITests.swift */; };
+		8D2626652412FEF800863F65 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2626642412FEF800863F65 /* UserController.swift */; };
 		8D567A74240C4C87006CA6D0 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D567A73240C4C87006CA6D0 /* CategoryTableViewController.swift */; };
 		8D5EABDA24096AE400992CC6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EABD824096AE400992CC6 /* Colors.xcassets */; };
 		8D5EABDB24096AE400992CC6 /* UIColor+NamedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EABD924096AE400992CC6 /* UIColor+NamedColors.swift */; };
 		8D5EABDD24096B8900992CC6 /* Sketch in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EABDC24096B8900992CC6 /* Sketch */; };
-		DAD82956FBCD950D4168064D /* libPods-OracyBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B24783A3D5B9D32C725348 /* libPods-OracyBox.a */; };
+		B2D18417CD2C80D549E99D52 /* Pods_OracyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA777A1758F56E9CE86F4AA /* Pods_OracyBox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,12 +72,13 @@
 		8D2515E22408112000605982 /* OracyBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OracyBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2515E62408112000605982 /* OracyBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OracyBoxUITests.swift; sourceTree = "<group>"; };
 		8D2515E82408112000605982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D2626642412FEF800863F65 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		8D567A73240C4C87006CA6D0 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		8D5EABD824096AE400992CC6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8D5EABD924096AE400992CC6 /* UIColor+NamedColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+NamedColors.swift"; sourceTree = "<group>"; };
 		8D5EABDC24096B8900992CC6 /* Sketch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sketch; sourceTree = "<group>"; };
 		BD90960C4492F91789C3566E /* Pods-OracyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OracyBox.debug.xcconfig"; path = "Target Support Files/Pods-OracyBox/Pods-OracyBox.debug.xcconfig"; sourceTree = "<group>"; };
-		F2B24783A3D5B9D32C725348 /* libPods-OracyBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OracyBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA777A1758F56E9CE86F4AA /* Pods_OracyBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OracyBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAD82956FBCD950D4168064D /* libPods-OracyBox.a in Frameworks */,
+				B2D18417CD2C80D549E99D52 /* Pods_OracyBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +182,7 @@
 				8D567A73240C4C87006CA6D0 /* CategoryTableViewController.swift */,
 				8D1C16DC240D827800B6C78D /* ActivityTableViewController.swift */,
 				8D1C16DE240D8F3F00B6C78D /* ActivityViewController.swift */,
+				8D2626642412FEF800863F65 /* UserController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,7 +226,7 @@
 		D4905145F3009A07CB5E47FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F2B24783A3D5B9D32C725348 /* libPods-OracyBox.a */,
+				BEA777A1758F56E9CE86F4AA /* Pods_OracyBox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				8D2515BC2408111F00605982 /* Sources */,
 				8D2515BD2408111F00605982 /* Frameworks */,
 				8D2515BE2408111F00605982 /* Resources */,
+				79846C15FFDCDF385475BDAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -360,6 +364,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		79846C15FFDCDF385475BDAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OracyBox/Pods-OracyBox-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OracyBox/Pods-OracyBox-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OracyBox/Pods-OracyBox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F59925E80A330FB76092F8EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -395,6 +416,7 @@
 				8D1C16DF240D8F3F00B6C78D /* ActivityViewController.swift in Sources */,
 				8D567A74240C4C87006CA6D0 /* CategoryTableViewController.swift in Sources */,
 				8D2515C42408111F00605982 /* AppDelegate.swift in Sources */,
+				8D2626652412FEF800863F65 /* UserController.swift in Sources */,
 				8D1C16DD240D827800B6C78D /* ActivityTableViewController.swift in Sources */,
 				8D233EC12409A47E006E0405 /* CollectionController.swift in Sources */,
 				8D1C16E2240DA2D900B6C78D /* NetworkingClient.swift in Sources */,
