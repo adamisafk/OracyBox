@@ -17,6 +17,7 @@ struct Keys {
     static let prefix1 = "user1_"
     static let prefix2 = "user2_"
     static let token = "token"
+    static let baseURL = "https://oracybox.adamhowells.co.uk/api/"
     
     static let id = "id"
     static let role_id = "role_id"
@@ -28,11 +29,12 @@ struct Keys {
 class LoginController: UIViewController {
     
     // need to load the website first, then use ps:exec to reinstall passport oauth private keys between thirty minutes of inactivity due to heroku free plan.
-    let baseURL =  "http://oracybox.test/api/user/login"
+    let baseURL =  Keys.baseURL
     private let networkingClient = NetworkingClient()
     let keychain1 = KeychainSwift(keyPrefix: Keys.prefix1)
     let keychain2 = KeychainSwift(keyPrefix: Keys.prefix2)
     let userController = UserController()
+    let curriculumController = CurriculumController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,20 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var letsgoButton: UIButton!
     @IBOutlet weak var letsgoLabel: UILabel!
+    @IBAction func letsGoButtonOnClick(_ sender: UIButton) {
+        // pass through data
+        curriculumController.getSubjects { (json) in
+            // parse json to useable array
+            var subjectArray = [String]()
+            for (_, subJson):(String, JSON) in json {
+                subjectArray.append(subJson["name"].stringValue)
+            }
+            // pass data and segue
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeController") as? HomeController
+            vc?.areaOfLearnings = subjectArray
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
+    }
     
     
     @IBOutlet weak var loginButton: UIButton!
@@ -96,7 +112,7 @@ class LoginController: UIViewController {
 
     
     func loginUser(username: String, password: String, loginTitle: String) {
-        let loginURL = self.baseURL + "?email=" + username + "&password=" + password
+        let loginURL = self.baseURL + "user/login?email=" + username + "&password=" + password
         
         Alamofire.request(loginURL, method: .post).responseSwiftyJSON { response in
             // TODO: Error handling and response status handling

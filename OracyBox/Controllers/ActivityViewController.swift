@@ -13,18 +13,17 @@ class ActivityViewController: UIViewController {
     
     let keychain1 = KeychainSwift(keyPrefix: Keys.prefix1)
     let keychain2 = KeychainSwift(keyPrefix: Keys.prefix2)
+    let curriculumController = CurriculumController()
     
     var areaName = ""
     var categoryName = ""
     var activityName = ""
+    var activityId = Int()
 
     @IBOutlet weak var areaLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var token1Text: UITextView!
-    @IBOutlet weak var token2Text: UITextView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +31,17 @@ class ActivityViewController: UIViewController {
         areaLabel.text = areaName
         categoryLabel.text = categoryName
         activityLabel.text = activityName
-        nameLabel.text = keychain1.get(Keys.name)
-        token1Text.text = keychain1.get(Keys.token)!
-        token2Text.text = keychain2.get(Keys.token)!
+        
+        let usersName = keychain1.get(Keys.name)
+        let usersNameArray = usersName?.split(separator: " ")
+        nameLabel.text = usersNameArray![0] + ", you're up first!"
+    }
+    
+    // TEMP
+    @IBAction func letsGoOnClick(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "TempViewController") as? TempViewController
+        vc?.activityId = activityId
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
 

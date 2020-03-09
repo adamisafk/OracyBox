@@ -24,10 +24,12 @@
 		8D2515DC2408112000605982 /* OracyBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2515DB2408112000605982 /* OracyBoxTests.swift */; };
 		8D2515E72408112000605982 /* OracyBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2515E62408112000605982 /* OracyBoxUITests.swift */; };
 		8D2626652412FEF800863F65 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2626642412FEF800863F65 /* UserController.swift */; };
+		8D27E73E2416BEE700854348 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D27E73D2416BEE700854348 /* TempViewController.swift */; };
 		8D567A74240C4C87006CA6D0 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D567A73240C4C87006CA6D0 /* CategoryTableViewController.swift */; };
 		8D5EABDA24096AE400992CC6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EABD824096AE400992CC6 /* Colors.xcassets */; };
 		8D5EABDB24096AE400992CC6 /* UIColor+NamedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EABD924096AE400992CC6 /* UIColor+NamedColors.swift */; };
 		8D5EABDD24096B8900992CC6 /* Sketch in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EABDC24096B8900992CC6 /* Sketch */; };
+		8DB307F82414234700F6F570 /* CurriculumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB307F72414234700F6F570 /* CurriculumController.swift */; };
 		B2D18417CD2C80D549E99D52 /* Pods_OracyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA777A1758F56E9CE86F4AA /* Pods_OracyBox.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,10 +75,12 @@
 		8D2515E62408112000605982 /* OracyBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OracyBoxUITests.swift; sourceTree = "<group>"; };
 		8D2515E82408112000605982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D2626642412FEF800863F65 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		8D27E73D2416BEE700854348 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 		8D567A73240C4C87006CA6D0 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		8D5EABD824096AE400992CC6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8D5EABD924096AE400992CC6 /* UIColor+NamedColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+NamedColors.swift"; sourceTree = "<group>"; };
 		8D5EABDC24096B8900992CC6 /* Sketch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sketch; sourceTree = "<group>"; };
+		8DB307F72414234700F6F570 /* CurriculumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumController.swift; sourceTree = "<group>"; };
 		BD90960C4492F91789C3566E /* Pods-OracyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OracyBox.debug.xcconfig"; path = "Target Support Files/Pods-OracyBox/Pods-OracyBox.debug.xcconfig"; sourceTree = "<group>"; };
 		BEA777A1758F56E9CE86F4AA /* Pods_OracyBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OracyBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,6 +187,8 @@
 				8D1C16DC240D827800B6C78D /* ActivityTableViewController.swift */,
 				8D1C16DE240D8F3F00B6C78D /* ActivityViewController.swift */,
 				8D2626642412FEF800863F65 /* UserController.swift */,
+				8DB307F72414234700F6F570 /* CurriculumController.swift */,
+				8D27E73D2416BEE700854348 /* TempViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 			files = (
 				8D2515CC2408111F00605982 /* OracyBox.xcdatamodeld in Sources */,
 				8D2515C62408111F00605982 /* ViewController.swift in Sources */,
+				8D27E73E2416BEE700854348 /* TempViewController.swift in Sources */,
 				8D233EBF2409A2E3006E0405 /* HomeController.swift in Sources */,
 				8D1C16DF240D8F3F00B6C78D /* ActivityViewController.swift in Sources */,
 				8D567A74240C4C87006CA6D0 /* CategoryTableViewController.swift in Sources */,
@@ -419,6 +426,7 @@
 				8D2626652412FEF800863F65 /* UserController.swift in Sources */,
 				8D1C16DD240D827800B6C78D /* ActivityTableViewController.swift in Sources */,
 				8D233EC12409A47E006E0405 /* CollectionController.swift in Sources */,
+				8DB307F82414234700F6F570 /* CurriculumController.swift in Sources */,
 				8D1C16E2240DA2D900B6C78D /* NetworkingClient.swift in Sources */,
 				8D5EABDB24096AE400992CC6 /* UIColor+NamedColors.swift in Sources */,
 				8D233EBC24097E62006E0405 /* LoginController.swift in Sources */,

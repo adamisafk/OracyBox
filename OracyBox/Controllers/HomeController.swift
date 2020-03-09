@@ -8,18 +8,13 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 class HomeController: UIViewController {
     
-    let areaOfLearnings = ["Expressive Arts", "Humanities", "Maths and Numeracy", "Science and Technology", "Language, Literacy,\nCommunication", "Health and Wellbeing"]
-    let categories = [
-        ["11", "12", "13", "14", "15", "16", "17", "18"], // expressive arts
-        ["21", "22", "23", "24", "25", "26", "27", "28"], // humanities
-        ["31", "32", "33", "34", "35", "36", "37", "38"], // maths and numeracy
-        ["41", "42", "43", "44", "45", "46", "47", "48"], // science and technology
-        ["51", "52", "53", "54", "55", "56", "57", "58"], // language, literacy, communication
-        ["Physical Activity", "Diet and Nutrition", "Mental Wellbeing", "Healthy Lifestyle", "Social Awareness", "Healthy Relationships"] // health and wellbeing
-    ]
+    var areaOfLearnings = [String]()
+    var categories = [String]()
+    let curriculumController = CurriculumController()
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -41,11 +36,17 @@ extension HomeController : UICollectionViewDataSource, UICollectionViewDelegate 
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("selected")
-        let vc = storyboard?.instantiateViewController(withIdentifier: "CategoryTableViewController") as? CategoryTableViewController
-        vc?.areaName = areaOfLearnings[indexPath.row]
-        vc?.areaCategories = categories[indexPath.row]
-        vc?.categoryID = indexPath.row
-        self.navigationController?.pushViewController(vc!, animated: true)
+        print(indexPath.row + 1) // id of subject selected
+        // pass through data
+        curriculumController.getTopics(subjectId: String(indexPath.row + 1)) { (json) in
+            for (_, subJson):(String, JSON) in json {
+                self.categories.append(subJson["name"].stringValue)
+            }
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CategoryTableViewController") as? CategoryTableViewController
+            vc?.areaName = self.areaOfLearnings[indexPath.row]
+            vc?.areaCategories = self.categories
+            vc?.categoryID = indexPath.row + 1
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
 }

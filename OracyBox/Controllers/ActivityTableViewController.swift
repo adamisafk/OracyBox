@@ -10,7 +10,7 @@ import UIKit
 
 class ActivityTableViewController: UITableViewController {
     
-    var activities = [] as [String]
+    var activities = [String]()
     var areaName = ""
     var categoryName = ""
 
@@ -45,6 +45,7 @@ class ActivityTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ActivityViewController") as? ActivityViewController
+        vc?.activityId = indexPath.row + 1
         vc?.areaName = areaName
         vc?.categoryName = categoryName
         vc?.activityName = activities[indexPath.row]

@@ -19,7 +19,8 @@ class UserController {
             "Authorization": "Bearer " + token
         ]
         
-        Alamofire.request("http://oracybox.test/api/user", method: .get, headers: headers).responseSwiftyJSON { (response) in
+        Alamofire.request(Keys.baseURL + "user", method: .get, headers: headers).responseSwiftyJSON { (response) in
+            print(response)
             let json = try! JSON(data: response.data!)
             keychain.set(json["id"].stringValue, forKey: Keys.id)
             keychain.set(json["name"].stringValue, forKey: Keys.name)

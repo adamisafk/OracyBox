@@ -7,111 +7,19 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class CategoryTableViewController: UITableViewController {
     
     var areaName = ""
     var categoryName = ""
-    var areaCategories = [] as [String]
+    var areaCategories = [String]()
     var categoryID = 0
-    
-    // TEMPORARY ACTIVITY DATA TO PASS TO ACTIVITY TABLE VIEW CONTROLLER
-    var activityData = [
-        // Expressive Arts [0]
-        [
-            // [6,1]
-            ["1", "2", "3", "4", "5", "6"],
-            // [6,2]
-            ["1", "2", "3", "4", "5", "6"],
-            // [6,3]
-            ["1", "2", "3", "4", "5", "6"],
-            // [6,4]
-            ["1", "2", "3", "4", "5", "6"],
-            // [6,5]
-            ["1", "2", "3", "4", "5", "6"],
-            // [6,6]
-            ["1", "2", "3", "4", "5", "6"]
-        ],
-        // Humanities [1]
-        [
-            // [3,1]
-            ["1", "2", "3", "4", "5", "6"],
-            // [3,2]
-            ["1", "2", "3", "4", "5", "6"],
-            // [3,3]
-            ["1", "2", "3", "4", "5", "6"],
-            // [3,4]
-            ["1", "2", "3", "4", "5", "6"],
-            // [3,5]
-            ["1", "2", "3", "4", "5", "6"],
-            // [3,6]
-            ["1", "2", "3", "4", "5", "6"]
-        ],
-        // Maths and Numeracy [4]
-        [
-            // [4,1]
-            ["1", "2", "3", "4", "5", "6"],
-            // [4,2]
-            ["1", "2", "3", "4", "5", "6"],
-            // [4,3]
-            ["1", "2", "3", "4", "5", "6"],
-            // [4,4]
-            ["1", "2", "3", "4", "5", "6"],
-            // [4,5]
-            ["1", "2", "3", "4", "5", "6"],
-            // [4,6]
-            ["1", "2", "3", "4", "5", "6"]
-        ],
-        // Science and Technology [2]
-            [
-                // [2,1]
-                    ["scat11", "2", "3", "4", "5", "6"],
-                // [2,2]
-                    ["scat21", "2", "3", "4", "5", "6"],
-                // [2,3]
-                    ["scat31", "2", "3", "4", "5", "6"],
-                // [2,4]
-                    ["1", "2", "3", "4", "5", "6"],
-                // [2,5]
-                    ["1", "2", "3", "4", "5", "6"],
-                // [2,6]
-                    ["1", "2", "3", "4", "5", "6"]
-            ],
-        // Language, Lit, and Comm [5]
-            [
-                // [5,1]
-                    ["1", "2", "3", "4", "5", "6"],
-                // [5,2]
-                    ["1", "2", "3", "4", "5", "6"],
-                // [5,3]
-                    ["1", "2", "3", "4", "5", "6"],
-                // [5,4]
-                    ["1", "2", "3", "4", "5", "6"],
-                // [5,5]
-                    ["1", "2", "3", "4", "5", "6"],
-                // [5,6]
-                    ["1", "2", "3", "4", "5", "6"]
-            ],
-        // Health and Wellbeing  [1]
-        [
-            // Phyiscal Activity [1,1]
-            ["Why physical activity is important", "Types of physical activities", "The role of muscles", "How to properly stretch", "Physical and emotional changes when active", "How the heart works"],
-            // Diet and Nutrition [1,2]
-            ["dan1", "dan2", "dan3", "dan4", "dan5", "dan6"],
-            // Mental Wellbeing [1,3]
-            ["mw1", "mw2", "mw3", "mw4", "mw5", "mw6"],
-            // Healthy Lifestyle [1,4]
-            ["1", "2", "3", "4", "5", "6"],
-            // Social Awareness [1,5]
-            ["1", "2", "3", "4", "5", "6"],
-            // Healthy Relationships [1,6]
-            ["1", "2", "3", "4", "5", "6"]
-        ]
-    ]
+    var activityArray = [String]()
+    let curriculumController = CurriculumController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -141,12 +49,16 @@ class CategoryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected")
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ActivityTableViewController") as? ActivityTableViewController
-        vc?.activities = activityData[categoryID][indexPath.row]
-        vc?.areaName = areaName
-        vc?.categoryName = areaCategories[indexPath.row]
-        self.navigationController?.pushViewController(vc!, animated: true)
+        curriculumController.getActivities(topicId: String(indexPath.row + 1)) { (json) in
+            for (_, subJson):(String, JSON) in json {
+                self.activityArray.append(subJson["name"].stringValue)
+            }
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ActivityTableViewController") as? ActivityTableViewController
+            vc?.self.areaName = self.areaName
+            vc?.self.categoryName = self.areaCategories[indexPath.row]
+            vc?.self.activities = self.activityArray
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
 
     /*
